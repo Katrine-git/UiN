@@ -1,0 +1,114 @@
+body{
+    background-color: white;
+    margin: 0px;
+    display: grid;
+    grid-template-columns:  0.3fr 2fr 0.3fr;
+    grid-template-rows: 1fr 0.5fr auto 0.2fr;
+    grid-template-areas: " header header header"
+                        ". nav ."
+                        ". main ."
+                        "footer footer footer";
+}
+
+header{
+    box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.72);
+    width: 100%;
+    grid-area: header;
+}
+nav{
+    grid-area: nav; 
+}
+main{
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
+    background-color: lightgrey;
+    margin-top: 3%;
+}
+
+#formTitle{
+    height: 2em;
+    width: 20em;
+}
+#formContent{
+    height: 5em;
+    width: 50em;
+}
+
+#knapp{
+    background-color: cyan;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-left: 600px;
+}
+
+.todo-knapp{
+    text-decoration: none;
+    background-color: cyan;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/*Flexbox*/
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#box1, #box2, #box3, #box4, #box5, #box6 {
+    box-shadow: 1px 6px 21px 6px rgba(78,236,255,0.62);
+    width: 25%;
+    padding: 5px;
+    text-align: center;
+    margin: 10px;
+}
+
+/*Tekst*/
+#venstre{
+   float: left;
+   padding-left: 8px;
+}
+#hoyre{
+    float: right;
+    padding-right: 8px;
+    font-weight:normal;
+}
+
+#footer-text{
+    color: grey;
+    margin-left: 100px;
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        grid-template-areas: " header header header"
+                        "nav nav nav"
+                        "main main main"
+                        "footer footer footer";
+    }
+    .container{
+        flex-direction: column;
+    }
+    #box1, #box2, #box3, #box4, #box5, #box6 {
+        width: auto;
+    }
+    #formTitle{
+        height: 2em;
+        width: 20em;
+        margin-left: 5px;
+    }
+    #formContent{
+        height: 5em;
+        width: 26em;
+        margin-left: 5px;
+    }
+    #knapp{
+        margin-left: 270px;
+    }
+}
